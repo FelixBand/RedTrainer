@@ -23,11 +23,11 @@ lib.registerMenu({
     position = 'top-right',
     onCheck = function(selected, checked, args)
         if args.id == 'god' then
-          godmode()
-        elseif args.id == 'noclip' then 
+            godmode()
+            elseif args.id == 'noclip' then 
             
-        end
-      end,
+            end
+        end,
     options = {
        
         {label = 'Max Health Core', args = {id = 'max-health'}},
