@@ -149,41 +149,6 @@ lib.registerMenu({
         HORSEORFANCYCOACHORNICEBOAT(fucku[1])
     elseif args.id == 'boost-veh' then 
         boostlittlehorsee()
-    elseif args.id == 'car-veh' then
-        local horseOptions = {}
-        for _, horse in ipairs(Config.HorsesMenu) do
-            table.insert(horseOptions, { label = horse.label, icon = 'horse-head', args = { model = horse.model } })
-        end
-
-        lib.registerMenu({
-            id = 'zaps-rd-vehicle-horses',
-            title = 'Horse Spawner',
-            position = 'top-right',
-            options = horseOptions
-        }, function(selected, scrollIndex, args)
-            HORSEORFANCYCOACHORNICEBOAT(args.model)
-        end)
-
-        lib.showMenu('zaps-rd-vehicle-horses')
-
-    end
-end)
-
-
-lib.registerMenu({
-    id = 'zaps-rd-vehicle-spawner',
-    title = 'Vehicle Spawner',
-    position = 'top-right',
-    options = (function()
-        local opts = {}
-        for _, horse in ipairs(horseSpawnOptions) do
-            table.insert(opts, {label = horse.label, icon = 'horse-head', args = {id = 'spawn-horse', model = horse.model}})
-        end
-        return opts
-    end)()
-}, function(selected, scrollIndex, args)
-    if args.id == 'spawn-horse' then
-        HORSEORFANCYCOACHORNICEBOAT(args.model)
     end
 end)
 
