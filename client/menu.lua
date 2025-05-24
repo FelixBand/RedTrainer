@@ -147,7 +147,7 @@ lib.registerMenu({
     options = {
         {label = 'By Model Name', icon = 'ship', args = {id = 'spawn-veh'}},
         {label = 'Repair Vehicle', icon = 'hammer', args = {id = 'repair-veh'}},
-        {label = 'Boost Vehicle', icon = 'jet-fighter', args = {id = 'boost-veh'}},
+        {label = 'Boost Cores', icon = 'jet-fighter', args = {id = 'boost-veh'}},
         {label = 'Vehicle Spawner', icon = 'horse-head', args = {id = 'car-veh'}},
 
 
