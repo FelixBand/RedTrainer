@@ -123,7 +123,22 @@ lib.registerMenu({
     end
 end)
 
+local horseSpawnerOptions = {}
 
+for _, horse in ipairs(Config.HorsesMenu) do
+    table.insert(horseSpawnerOptions, {label = horse.label, icon = 'horse-head', args = {id = 'spawn_horse', model = horse.model}})
+end
+
+lib.registerMenu({
+    id = 'zaps-rd-horsespawner',
+    title = 'Horse Spawner',
+    position = 'top-right',
+    options = horseSpawnerOptions
+}, function(selected, scrollIndex, args)
+    if args.id == 'spawn_horse' then
+        HORSEORFANCYCOACHORNICEBOAT(args.model)
+    end
+end)
 
 lib.registerMenu({
     id = 'zaps-rd-vehicle',
@@ -149,8 +164,11 @@ lib.registerMenu({
         HORSEORFANCYCOACHORNICEBOAT(fucku[1])
     elseif args.id == 'boost-veh' then 
         boostlittlehorsee()
+    elseif args.id == 'car-veh' then
+        lib.showMenu('zaps-rd-horsespawner')
     end
 end)
+
 
 
 lib.registerMenu({
