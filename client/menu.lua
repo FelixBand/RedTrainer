@@ -23,7 +23,7 @@ lib.registerMenu({
     position = 'top-right',
     onCheck = function(selected, checked, args)
         if args.id == 'god' then
-          godemode()
+          godmode()
         elseif args.id == 'noclip' then 
             
         end
@@ -48,13 +48,11 @@ lib.registerMenu({
     elseif args.id == 'clear-ped-task' then 
         clearpedtask()
     elseif args.id == 'hog-tie' then 
-hottieyourself()
-elseif args.id == 'clean-ped' then 
-    cleanped()
-elseif args.id == 'max-satmina' then 
-    maxhealthcore()
-
---
+        hogtieyourself()
+    elseif args.id == 'clean-ped' then 
+        cleanped()
+    elseif args.id == 'max-satmina' then 
+        maxhealthcore()
     end
 end)
 
@@ -174,7 +172,7 @@ lib.registerMenu({
     }
 }, function(selected, scrollIndex, args)
       if args.id == 'd' then
-        godemode()
+        godmode()
         print("DDD")
         elseif args.id == 'openselfoptions' then
             lib.showMenu('zaps-rd-player')
@@ -209,7 +207,7 @@ else
     end)
 end
 
-function godemode()
+function godmode()
     LocalPlayer.state.godmode = not LocalPlayer.state.godmode
     if LocalPlayer.state.godmode then
         lib.notify({
@@ -349,7 +347,7 @@ function clipboard()
 end
 
 
-function hottieyourself()
+function hogtieyourself()
     Citizen.InvokeNative(0x42AC6401ABB8C7E5, PlayerPedId(), false, false)
 end
 
