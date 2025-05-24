@@ -86,3 +86,10 @@ Config.ModularSetup = {
     },
 }
 
+Config.HorsesMenu = {
+    { label = "White Arabian", model = "A_C_Horse_Arabian_White" },
+    { label = "Chestnut Morgan", model = "A_C_Horse_Morgan_FlaxenChestnut" },
+    { label = "Black Thoroughbred", model = "A_C_Horse_Thoroughbred_BlackChestnut" },
+    { label = "Silver Dapple Pinto Missouri Fox Trotter", model = "A_C_Horse_MissouriFoxtrotter_SilverDapplePinto" },
+    { label = "Turkoman Gold", model = "A_C_Horse_Turkoman_Gold" }
+}
