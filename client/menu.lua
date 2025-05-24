@@ -15,7 +15,7 @@ DONT EDIT BELOW THIS LINE UNLESS YOU KNOW WHAT YOUR DOING
 DONT EDIT BELOW THIS LINE UNLESS YOU KNOW WHAT YOUR DOING
 --]=====]
 
-LocalPlayer.state.godmode =
+LocalPlayer.state.godmode = false
 
 lib.registerMenu({
     id = 'zaps-rd-player',
