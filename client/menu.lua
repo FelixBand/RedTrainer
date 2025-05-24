@@ -65,13 +65,11 @@ local weaponOptions = Config.ModularSetup[1]["giveweapon"].WeaponsMenu
 
 local menuOptions = {
     {label = 'Spawn Weapon By Model', icon = 'gun', args = {id = 'spawn_model'}},
-    {label = 'Remove All Weapons', icon = 'gun', args = {id = 'remove_all'}},
 }
 
 for _, weaponInfo in ipairs(weaponOptions) do
     table.insert(menuOptions, {label = weaponInfo.label, icon = 'gun', args = {id = weaponInfo.label, model = weaponInfo.model}})
 end
-
 
 lib.registerMenu({
     id = 'zaps-rd-weapon',
@@ -83,14 +81,11 @@ lib.registerMenu({
         local input = lib.inputDialog('Weapon Module', {'Weapon Name', 'Ammo'})
 
         if not input then return end
-
         local weaponModel = input[1]
-        giveWeapon(weaponModel)
-    elseif args.id == 'remove_all' then
-        RemoveAllPedWeapons(cache.ped, true, true)
-    else
+            giveWeapon(weaponModel)
+    else 
         giveWeapon(args.model)
-    end
+   end 
 end)
 
 lib.registerMenu({
@@ -101,6 +96,8 @@ lib.registerMenu({
         {label = 'Copy Coords', icon = 'clipboard', args = {id = 'copy-coords'}},
         {label = 'ShowEntityModels', checked = false, icon = 'network-wired',  args = {id = 'ShowEntityModels'}},
         {label = 'Teleport To Waypoint',  icon = 'hat-wizard',  args = {id = 'teleportToWaypoint'}},
+
+
     }
 
         
@@ -178,6 +175,7 @@ lib.registerMenu({
 }, function(selected, scrollIndex, args)
       if args.id == 'd' then
         godemode()
+        print("DDD")
         elseif args.id == 'openselfoptions' then
             lib.showMenu('zaps-rd-player')
         elseif args.id == 'zaps-rd-server' then
@@ -194,27 +192,22 @@ lib.registerMenu({
         end
 end)
 
-if Config.UseCommand then 
-RegisterCommand(Config.MenuCommand, function() -- Main Menu
-    lib.showMenu('zaps-rd-main')
-end)
-else 
- CreateThread(function()
-    while true do
-        Citizen.Wait(10)
+if Config.UseCommand then
+    RegisterCommand(Config.MenuCommand, function() -- Main Menu
+        lib.showMenu('zaps-rd-main')
+    end)
+else
+    CreateThread(function()
+        while true do
+            Citizen.Wait(10)
 
-    if IsKeyBeingPressed(Config.KeyBinding) then
-    lib.showMenu('zaps-rd-main')
-    end
+            -- Check for N key (keyboard only)
+            if IsControlJustPressed(0, 0x4BC9DABB) then
+                lib.showMenu('zaps-rd-main')
+            end
+        end
+    end)
 end
- end)
-end
-
-function IsKeyBeingPressed(key)
-    return IsControlJustPressed(0, key)
-end
-
-
 
 function godemode()
     LocalPlayer.state.godmode = not LocalPlayer.state.godmode
@@ -238,12 +231,12 @@ end
 
 
 function maxhealthcore()
-    SetEntityHealth(cache.ped or PlayerPedId(), GetEntityMaxHealth(cache.ped or PlayerPedId()))
-    ClearPedBloodDamage(cache.ped or PlayerPedId())
+    SetEntityHealth(PlayerPedId(), GetEntityMaxHealth(PlayerPedId()))
+    ClearPedBloodDamage(PlayerPedId())
     RestorePlayerStamina(PlayerId(), 100.0)
-    Citizen.InvokeNative(0xC6258F41D86676E0, cache.ped or PlayerPedId(), 0, 100) -- SetAttributeCoreValue
-    Citizen.InvokeNative(0xC6258F41D86676E0, cache.ped or PlayerPedId(), 1, 100) 
-    Citizen.InvokeNative(0xC6258F41D86676E0, cache.ped or PlayerPedId(), 2, 100) 
+    Citizen.InvokeNative(0xC6258F41D86676E0, PlayerPedId(), 0, 100) -- SetAttributeCoreValue
+    Citizen.InvokeNative(0xC6258F41D86676E0, PlayerPedId(), 1, 100) 
+    Citizen.InvokeNative(0xC6258F41D86676E0, PlayerPedId(), 2, 100) 
 
   end
 
@@ -256,11 +249,11 @@ function superjump()
 
     CreateThread(function()
         while isSuperJumping do
-            SetPedMoveRateOverride( cache.ped or PlayerPedId(), 1.15)
+            SetPedMoveRateOverride(PlayerPedId(), 1.15)
             SetSuperJumpThisFrame(PlayerId())
             Wait(0)
         end
-        ResetPedMoveRateOverride(cache.ped or PlayerPedId())
+        ResetPedMoveRateOverride(PlayerPedId())
     end)
 end 
 
@@ -273,7 +266,7 @@ function tpcoords(coords)
     local x = coords[1]
     local y = coords[2]
     local z = coords[3]
-    local ped = cache.ped or PlayerPedId()
+    local ped = PlayerPedId()
 
     DoScreenFadeOut(500)
     while not IsScreenFadedOut() do Wait(0) end
@@ -288,7 +281,7 @@ end
 
 
 function repair()
-    local ped = cache.ped or PlayerPedId()
+    local ped = PlayerPedId()
     local veh = GetVehiclePedIsIn(ped, false)
     if veh and veh > 0 then
         SetVehicleUndriveable(veh, false)
@@ -311,11 +304,11 @@ function repair()
     end
 
 function clearpedtask()
-    ClearPedTasksImmediately(cache.ped or PlayerPedId())
+    ClearPedTasksImmediately(PlayerPedId())
 end 
 
 function giveWeapon(weaponModel)
-    local playerPed = cache.ped or PlayerPedId() 
+    local playerPed = PlayerPedId() 
     
     if playerPed ~= -1 then
         local weaponHash = joaat(weaponModel) 
@@ -340,14 +333,16 @@ end
 
 
 function clipboard()
-    local ped = cache.ped or PlayerPedId()
+    local ped = PlayerPedId()
     local curCoords = GetEntityCoords(ped)
     local currHeading = GetEntityHeading(ped)
-    local stringCoords = ('%.4f, %.4f, %.4f, %.4f'):format(curCoords.x, curCoords.y, curCoords.z, currHeading)
+    --local stringCoords = ('%.4f, %.4f, %.4f, %.4f'):format(curCoords.x, curCoords.y, curCoords.z, currHeading)
+    local stringCoords = ("spawnpoint 'player_three' { x = %.4f, y = %.4f, z = %.4f }")
+        :format(curCoords.x, curCoords.y, curCoords.z)
     lib.setClipboard(stringCoords)
     lib.notify({
         title = 'RedM | Trainer',
-        description = 'Coords have been copy.',
+        description = 'Coords have been copied.',
         type = 'success'
     })
     
@@ -355,7 +350,7 @@ end
 
 
 function hottieyourself()
-    Citizen.InvokeNative(0x42AC6401ABB8C7E5, cache.ped or PlayerPedId(), false, false)
+    Citizen.InvokeNative(0x42AC6401ABB8C7E5, PlayerPedId(), false, false)
 end
 
 
@@ -379,7 +374,7 @@ function HORSEORFANCYCOACHORNICEBOAT(model)
         return
     end
 
-    local playerPed = cache.ped or PlayerPedId()
+    local playerPed = PlayerPedId()
     local playerCoords = GetEntityCoords(playerPed)
     local playerHeading = GetEntityHeading(playerPed)
     local currentVeh = GetVehiclePedIsIn(playerPed, false)
@@ -415,7 +410,7 @@ function HORSEORFANCYCOACHORNICEBOAT(model)
 end
 
  function boostlittlehorsee()
-    local ped = cache.ped or PlayerPedId()
+    local ped = PlayerPedId()
     local horse = IsPedOnMount(ped) and GetMount(ped) or false
     if not horse then
         return 
@@ -438,7 +433,7 @@ end
 
 
  function handleTpNormally(x, y, z)
-    local ped = cache.ped or PlayerPedId()
+    local ped = PlayerPedId()
     local veh = GetVehiclePedIsIn(ped, false)
     local horse
         if IsPedOnMount(ped) then

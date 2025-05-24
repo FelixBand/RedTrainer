@@ -1,11 +1,6 @@
 ![image](https://github.com/Zaps6000/RedTrainer/assets/122732007/fea83d82-5059-4dd1-8ef1-c00069e950dd)
-https://streamable.com/xos73m
+
 # RedTrainer
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T01APGOO)
-
-
-[![Discord](https://img.shields.io/badge/Discord-Support-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/tgrU8wgeHx) 
 
 RedTrainer is a powerful Lua-based menu for RedM, designed to provide a feature-rich experience akin to vMenu in FiveM. With RedTrainer, you can enhance your gameplay, customize your RedM experience, and enjoy a wide range of in-game options and features. Whether you're a player looking to explore new possibilities or a developer seeking to expand its functionality, RedTrainer has you covered.
 
@@ -23,7 +18,7 @@ RedTrainer is an open-source project and welcomes contributions from the communi
 
 ## Support
 
-For discussions, bug reports, or questions, join our community on [Discord](https://discord.gg/Uwg95JfwYT). We're here to assist you and provide the best RedM modding experience.
+For discussions, bug reports, or questions, join our community on [Discord](https://discord.gg/cfxdev). We're here to assist you and provide the best RedM modding experience.
 
 ## Getting Started
 
@@ -36,13 +31,8 @@ RedTrainer is released under the terms of the [GNU General Public License](LICEN
 ---
 
 ## Example for the Aces
-```cfg
+```
 add_principal identifier.steam:YOURACE group.admin
 add_ace group.admin RedTrainer.kick allow
-add_ace group.admin RedTrainer.ban allow
-```
-### Developer Shit
-```lua
-local RedTrainer = exports["RedTrainer"]:Core() -- fetch the object 
-```
-using this you can use callbacks get player identifiers from the server side etc more feature soon
+
+
