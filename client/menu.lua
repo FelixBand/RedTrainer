@@ -24,10 +24,10 @@ lib.registerMenu({
     onCheck = function(selected, checked, args)
         if args.id == 'god' then
             godmode()
-            elseif args.id == 'noclip' then 
-            
-            end
-        end,
+        elseif args.id == 'noclip' then 
+            print("Not yet implemented, use the Photo Mode key!")
+        end
+    end,
     options = {
        
         {label = 'Max Health Core', args = {id = 'max-health'}},
