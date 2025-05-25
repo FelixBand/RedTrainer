@@ -350,7 +350,7 @@ function clipboard()
     local curCoords = GetEntityCoords(ped)
     local currHeading = GetEntityHeading(ped)
     --local stringCoords = ('%.4f, %.4f, %.4f, %.4f'):format(curCoords.x, curCoords.y, curCoords.z, currHeading)
-    local stringCoords = ("spawnpoint 'player_three' { x = %.4f, y = %.4f, z = %.4f }")
+    local stringCoords = ("spawnpoint 'player_zero' { x = %.4f, y = %.4f, z = %.4f }")
         :format(curCoords.x, curCoords.y, curCoords.z)
     lib.setClipboard(stringCoords)
     lib.notify({
