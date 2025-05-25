@@ -32,7 +32,7 @@ lib.registerMenu({
        
         {label = 'Max Health Core', args = {id = 'max-health'}},
         {label = 'Max Stamina Core', args = {id = 'max-satmina'}},
-        {label = 'God Mode', checked = function() return LocalPlayer.state.godmode end, args = {id = 'god'}},
+        {label = 'God Mode', checked = LocalPlayer.state.godmode, args = {id = 'god'}},
         {label = 'Clear Ped Tasks', args = {id = 'clear-ped-task'}},
         {label = 'Hogtie Yourself',  args = {id = 'hog-tie'}},
         {label = 'Clean Ped', args = {id = 'clean-ped'}},
