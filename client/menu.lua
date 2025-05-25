@@ -107,7 +107,7 @@ lib.registerMenu({
     elseif args.id == 'teleportToWaypoint' then 
         if  IsWaypointActive() then
         waypoint = GetWaypointCoords()
-        tpcoords(vec3(waypoint.x, waypoint.y, -10))
+        tpcoords(vec3(waypoint.x, waypoint.y, -400))
         lib.notify({
             title = 'RedM Trainer',
             description = 'Going Across the oregon trail ...',
