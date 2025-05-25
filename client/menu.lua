@@ -226,7 +226,10 @@ lib.registerMenu({
             lib.showMenu('zaps-rd-customization')
         elseif args.id == 'zaps-rd-onlineplayers' then
             lib.showMenu('zaps-rd-onlineplayers')
-
+        elseif args.id == 'change-model' then
+            local input = lib.inputDialog('Change Player Model', {'Model Name'})
+            if not input then return end
+            changePlayerModel(input[1])
         end
 end)
 
