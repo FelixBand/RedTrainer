@@ -37,6 +37,7 @@ lib.registerMenu({
         {label = 'Hogtie Yourself',  args = {id = 'hog-tie'}},
         {label = 'Clean Ped', args = {id = 'clean-ped'}},
         {label = 'Noclip', checked = false,  args = {id = 'noclip'}},
+        {label = 'Change Model', icon = 'user', args = {id = 'change-model'}}
 
     }
 
@@ -122,6 +123,44 @@ lib.registerMenu({
     end
     end
 end)
+
+lib.registerMenu({
+    id = 'zaps-rd-change-model',
+    title = 'Change Player Model',
+    position = 'top-right',
+    options = {
+        {label = 'player_zero', args = {model = 'player_zero'}},
+        {label = 'player_three', args = {model = 'player_three'}},
+        {label = 'CS_valentineBill', args = {model = 'CS_valentineBill'}},
+        {label = 'U_M_M_NbxBartender_01', args = {model = 'U_M_M_NbxBartender_01'}},
+    }
+}, function(selected, scrollIndex, args)
+    if args.model then
+        changePlayerModel(args.model)
+    end
+end)
+
+function changePlayerModel(modelName)
+    local modelHash = GetHashKey(modelName)
+
+    RequestModel(modelHash)
+    while not HasModelLoaded(modelHash) do
+        Wait(0)
+    end
+
+    SetPlayerModel(PlayerId(), modelHash)
+    SetModelAsNoLongerNeeded(modelHash)
+
+    if N_0x283978a15512b2fe then
+        N_0x283978a15512b2fe(PlayerPedId(), true)
+    end
+
+    lib.notify({
+        title = 'RedM | Trainer',
+        description = 'Model changed to: ' .. modelName,
+        type = 'success'
+    })
+end
 
 local horseSpawnerOptions = {}
 
