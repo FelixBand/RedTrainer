@@ -31,7 +31,7 @@ lib.registerMenu({
     options = {
        
         {label = 'Max Health Core', args = {id = 'max-health'}},
-        {label = 'Max Stamina Core', args = {id = 'max-satmina'}},
+        {label = 'Max Stamina Core', args = {id = 'max-stamina'}},
         {label = 'God Mode', checked = LocalPlayer.state.godmode, args = {id = 'god'}},
         {label = 'Clear Ped Tasks', args = {id = 'clear-ped-task'}},
         {label = 'Hogtie Yourself',  args = {id = 'hog-tie'}},
@@ -51,7 +51,7 @@ lib.registerMenu({
         hogtieyourself()
     elseif args.id == 'clean-ped' then 
         cleanped()
-    elseif args.id == 'max-satmina' then 
+    elseif args.id == 'max-stamina' then 
         maxhealthcore()
     end
 end)
