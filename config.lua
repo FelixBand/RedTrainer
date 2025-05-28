@@ -86,10 +86,28 @@ Config.ModularSetup = {
     },
 }
 
-Config.HorsesMenu = {
+-- Config.HorsesMenu = {
+--     { label = "White Arabian", model = "A_C_Horse_Arabian_White" },
+--     { label = "Chestnut Morgan", model = "A_C_Horse_Morgan_FlaxenChestnut" },
+--     { label = "Black Thoroughbred", model = "A_C_Horse_Thoroughbred_BlackChestnut" },
+--     { label = "Silver Dapple Pinto Missouri Fox Trotter", model = "A_C_Horse_MissouriFoxtrotter_SilverDapplePinto" },
+--     { label = "Turkoman Gold", model = "A_C_Horse_Turkoman_Gold" }
+-- }
+
+Config.VehiclesMenu = {
+    -- Horses
     { label = "White Arabian", model = "A_C_Horse_Arabian_White" },
     { label = "Chestnut Morgan", model = "A_C_Horse_Morgan_FlaxenChestnut" },
     { label = "Black Thoroughbred", model = "A_C_Horse_Thoroughbred_BlackChestnut" },
     { label = "Silver Dapple Pinto Missouri Fox Trotter", model = "A_C_Horse_MissouriFoxtrotter_SilverDapplePinto" },
-    { label = "Turkoman Gold", model = "A_C_Horse_Turkoman_Gold" }
+    { label = "Turkoman Gold", model = "A_C_Horse_Turkoman_Gold" },
+    { label = "Greyovero AmericanPaint", model = "A_C_Horse_AmericanPaint_Greyovero" },
+    { label = "Overo AmericanPaint", model = "A_C_Horse_AmericanPaint_Overo" },
+    { label = "SplashedWhite AmericanPaint", model = "A_C_Horse_AmericanPaint_SplashedWhite" },
+    { label = "Tobiano AmericanPaint", model = "A_C_Horse_AmericanPaint_Tobiano" },
+    { label = "Black AmericanStandardbred", model = "A_C_Horse_AmericanStandardbred_Black" },
+    { label = "Buckskin AmericanStandardbred", model = "A_C_Horse_AmericanStandardbred_Buckskin" },
+    { label = "Lightbuckskin AmericanStandardbred", model = "A_C_Horse_AmericanStandardbred_Lightbuckskin" },
+    { label = "PalominoDapple AmericanStandardbred", model = "A_C_Horse_AmericanStandardbred_PalominoDapple" },
+    { label = "SilverTailBuckskin AmericanStandardbred", model = "A_C_Horse_AmericanStandardbred_SilverTailBuckskin" }
 }
