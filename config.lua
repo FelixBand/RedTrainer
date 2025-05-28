@@ -134,7 +134,6 @@ Config.HorsesMenu = {
     { label = "SealBrown DutchWarmblood", model = "A_C_Horse_DutchWarmblood_SealBrown" },
     { label = "SootyBuckskin DutchWarmblood", model = "A_C_Horse_DutchWarmblood_SootyBuckskin" },
     { label = "EagleFlies", model = "A_C_Horse_EagleFlies" },
-    { label = "arthur Gang", model = "A_C_Horse_Gang_arthur" },
     { label = "Bill Gang", model = "A_C_Horse_Gang_Bill" },
 
     -- Carts
