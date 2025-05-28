@@ -86,21 +86,7 @@ Config.ModularSetup = {
     },
 }
 
--- Config.HorsesMenu = {
---     { label = "White Arabian", model = "A_C_Horse_Arabian_White" },
---     { label = "Chestnut Morgan", model = "A_C_Horse_Morgan_FlaxenChestnut" },
---     { label = "Black Thoroughbred", model = "A_C_Horse_Thoroughbred_BlackChestnut" },
---     { label = "Silver Dapple Pinto Missouri Fox Trotter", model = "A_C_Horse_MissouriFoxtrotter_SilverDapplePinto" },
---     { label = "Turkoman Gold", model = "A_C_Horse_Turkoman_Gold" }
--- }
-
-Config.VehiclesMenu = {
-    -- Horses
-    { label = "White Arabian", model = "A_C_Horse_Arabian_White" },
-    { label = "Chestnut Morgan", model = "A_C_Horse_Morgan_FlaxenChestnut" },
-    { label = "Black Thoroughbred", model = "A_C_Horse_Thoroughbred_BlackChestnut" },
-    { label = "Silver Dapple Pinto Missouri Fox Trotter", model = "A_C_Horse_MissouriFoxtrotter_SilverDapplePinto" },
-    { label = "Turkoman Gold", model = "A_C_Horse_Turkoman_Gold" },
+Config.HorsesMenu = {
     { label = "Greyovero AmericanPaint", model = "A_C_Horse_AmericanPaint_Greyovero" },
     { label = "Overo AmericanPaint", model = "A_C_Horse_AmericanPaint_Overo" },
     { label = "SplashedWhite AmericanPaint", model = "A_C_Horse_AmericanPaint_SplashedWhite" },
@@ -109,5 +95,157 @@ Config.VehiclesMenu = {
     { label = "Buckskin AmericanStandardbred", model = "A_C_Horse_AmericanStandardbred_Buckskin" },
     { label = "Lightbuckskin AmericanStandardbred", model = "A_C_Horse_AmericanStandardbred_Lightbuckskin" },
     { label = "PalominoDapple AmericanStandardbred", model = "A_C_Horse_AmericanStandardbred_PalominoDapple" },
-    { label = "SilverTailBuckskin AmericanStandardbred", model = "A_C_Horse_AmericanStandardbred_SilverTailBuckskin" }
+    { label = "SilverTailBuckskin AmericanStandardbred", model = "A_C_Horse_AmericanStandardbred_SilverTailBuckskin" },
+    { label = "DarkBay Andalusian", model = "A_C_Horse_Andalusian_DarkBay" },
+    { label = "Perlino Andalusian", model = "A_C_Horse_Andalusian_Perlino" },
+    { label = "RoseGray Andalusian", model = "A_C_Horse_Andalusian_RoseGray" },
+    { label = "BlackSnowflake Appaloosa", model = "A_C_Horse_Appaloosa_BlackSnowflake" },
+    { label = "Blanket Appaloosa", model = "A_C_Horse_Appaloosa_Blanket" },
+    { label = "BrownLeopard Appaloosa", model = "A_C_Horse_Appaloosa_BrownLeopard" },
+    { label = "FewSpotted PC Appaloosa", model = "A_C_Horse_Appaloosa_FewSpotted_PC" },
+    { label = "Leopard Appaloosa", model = "A_C_Horse_Appaloosa_Leopard" },
+    { label = "LeopardBlanket Appaloosa", model = "A_C_Horse_Appaloosa_LeopardBlanket" },
+    { label = "Black Arabian", model = "A_C_Horse_Arabian_Black" },
+    { label = "Grey Arabian", model = "A_C_Horse_Arabian_Grey" },
+    { label = "RedChestnut Arabian", model = "A_C_Horse_Arabian_RedChestnut" },
+    { label = "RedChestnut PC Arabian", model = "A_C_Horse_Arabian_RedChestnut_PC" },
+    { label = "RoseGreyBay Arabian", model = "A_C_Horse_Arabian_RoseGreyBay" },
+    { label = "WarpedBrindle PC Arabian", model = "A_C_Horse_Arabian_WarpedBrindle_PC" },
+    { label = "White Arabian", model = "A_C_Horse_Arabian_White" },
+    { label = "BayRoan Ardennes", model = "A_C_Horse_Ardennes_BayRoan" },
+    { label = "IronGreyRoan Ardennes", model = "A_C_Horse_Ardennes_IronGreyRoan" },
+    { label = "StrawberryRoan Ardennes", model = "A_C_Horse_Ardennes_StrawberryRoan" },
+    { label = "BlondChestnut Belgian", model = "A_C_Horse_Belgian_BlondChestnut" },
+    { label = "MealyChestnut Belgian", model = "A_C_Horse_Belgian_MealyChestnut" },
+    { label = "GrulloDun Breton", model = "A_C_Horse_Breton_GrulloDun" },
+    { label = "MealyDappleBay Breton", model = "A_C_Horse_Breton_MealyDappleBay" },
+    { label = "RedRoan Breton", model = "A_C_Horse_Breton_RedRoan" },
+    { label = "Sealbrown Breton", model = "A_C_Horse_Breton_Sealbrown" },
+    { label = "Sorrel Breton", model = "A_C_Horse_Breton_Sorrel" },
+    { label = "SteelGrey Breton", model = "A_C_Horse_Breton_SteelGrey" },
+    { label = "WarVets Buell", model = "A_C_Horse_Buell_WarVets" },
+    { label = "Baybrindle Criollo", model = "A_C_Horse_Criollo_Baybrindle" },
+    { label = "Bayframeovero Criollo", model = "A_C_Horse_Criollo_Bayframeovero" },
+    { label = "Blueroanovero Criollo", model = "A_C_Horse_Criollo_Blueroanovero" },
+    { label = "Dun Criollo", model = "A_C_Horse_Criollo_Dun" },
+    { label = "Marblesabino Criollo", model = "A_C_Horse_Criollo_Marblesabino" },
+    { label = "Sorrelovero Criollo", model = "A_C_Horse_Criollo_Sorrelovero" },
+    { label = "ChocolateRoan DutchWarmblood", model = "A_C_Horse_DutchWarmblood_ChocolateRoan" },
+    { label = "SealBrown DutchWarmblood", model = "A_C_Horse_DutchWarmblood_SealBrown" },
+    { label = "SootyBuckskin DutchWarmblood", model = "A_C_Horse_DutchWarmblood_SootyBuckskin" },
+    { label = "EagleFlies", model = "A_C_Horse_EagleFlies" },
+    { label = "arthur Gang", model = "A_C_Horse_Gang_arthur" },
+    { label = "Bill Gang", model = "A_C_Horse_Gang_Bill" },
+
+    -- Carts
+    { label = "Cart 01", model = "CART01" },
+    { label = "Cart 02", model = "CART02" },
+    { label = "Cart 03", model = "CART03" },
+    { label = "Cart 04", model = "CART04" },
+    { label = "Cart 05", model = "CART05" },
+    { label = "Cart 06", model = "CART06" },
+    { label = "Cart 07", model = "CART07" },
+    { label = "Cart 08", model = "CART08" },
+    { label = "Army Supply Wagon", model = "ARMYSUPPLYWAGON" },
+
+    -- Buggies
+    { label = "Buggy 01", model = "BUGGY01" },
+    { label = "Buggy 02", model = "BUGGY02" },
+    { label = "Buggy 03", model = "BUGGY03" },
+
+    -- Coaches
+    { label = "Coach 2", model = "COACH2" },
+    { label = "Coach 3", model = "COACH3" },
+    { label = "Coach 4", model = "COACH4" },
+    { label = "Coach 5", model = "COACH5" },
+    { label = "Coach 6", model = "COACH6" },
+    { label = "Coach 3 Cutscene", model = "coach3_cutscene" },
+
+    -- Chuckwagons
+    { label = "Chuckwagon 000X", model = "CHUCKWAGON000X" },
+    { label = "Chuckwagon 002X", model = "CHUCKWAGON002X" },
+
+    -- Wagons
+    { label = "Coal Wagon", model = "coal_wagon" },
+    { label = "Oil Wagon 01X", model = "OILWAGON01X" },
+    { label = "Police Wagon 01X", model = "POLICEWAGON01X" },
+    { label = "Wagon 02X", model = "WAGON02X" },
+    { label = "Wagon 03X", model = "WAGON03X" },
+    { label = "Wagon 04X", model = "WAGON04X" },
+    { label = "Wagon 05X", model = "WAGON05X" },
+    { label = "Wagon 06X", model = "WAGON06X" },
+    { label = "Log Wagon", model = "LOGWAGON" },
+    { label = "Wagon Prison 01X", model = "WAGONPRISON01X" },
+    { label = "Utility Wagon", model = "UTILLIWAG" },
+    { label = "Supply Wagon", model = "supplywagon" },
+    { label = "Supply Wagon 2", model = "supplywagon2" },
+
+    -- Stagecoaches
+    { label = "Stagecoach 001X", model = "STAGECOACH001X" },
+    { label = "Stagecoach 002X", model = "STAGECOACH002X" },
+    { label = "Stagecoach 003X", model = "STAGECOACH003X" },
+    { label = "Stagecoach 004X", model = "STAGECOACH004X" },
+    { label = "Stagecoach 005X", model = "STAGECOACH005X" },
+    { label = "Stagecoach 006X", model = "STAGECOACH006X" },
+
+    -- Specialty Wagons
+    { label = "Circus Wagon 01X", model = "wagonCircus01x" },
+    { label = "Circus Wagon 02X", model = "wagonCircus02x" },
+    { label = "Dairy Wagon 01X", model = "wagonDairy01x" },
+    { label = "Work Wagon 01X", model = "wagonWork01x" },
+    { label = "Traveller Wagon 01X", model = "wagonTraveller01x" },
+    { label = "Doctor's Wagon 01X", model = "wagonDoc01x" },
+
+    -- Gat wagons
+    { label = "Gat Chuck", model = "GATCHUCK" },
+    { label = "Gat Chuck 2", model = "GATCHUCK_2" },
+
+    -- Boats
+    { label = "Canoe", model = "CANOE" },
+    { label = "Canoe Tree Trunk", model = "CANOETREETRUNK" },
+    { label = "Pirogue", model = "PIROGUE" },
+    { label = "Pirogue 2", model = "PIROGUE2" },
+    { label = "Rowboat", model = "rowboat" },
+    { label = "Rowboat Swamp", model = "ROWBOATSWAMP" },
+    { label = "Rowboat Swamp 02", model = "ROWBOATSWAMP02" },
+    { label = "RC Boat", model = "RCBOAT" },
+    { label = "Skiff", model = "SKIFF" },
+    { label = "Keelboat", model = "KEELBOAT" },
+    { label = "Steamer North", model = "NORTHSTEAMER01X" },
+    { label = "Steamer Private", model = "PRIVATESTEAMER01X" },
+    { label = "Ship Guama 02", model = "SHIP_GUAMA02" },
+    { label = "Ship NBD Guama", model = "SHIP_NBDGUAMA" },
+    { label = "Turbine Boat", model = "turbineboat" },
+    { label = "Horse Boat", model = "horseBoat" },
+
+    -- Trains
+    { label = "Caboose 01X", model = "CABOOSE01X" },
+    { label = "North Passenger 01X", model = "northpassenger01x" },
+    { label = "North Passenger 03X", model = "northpassenger03x" },
+    { label = "North Coal Car 01X", model = "northcoalcar01x" },
+    { label = "North Flatcar 01X", model = "northflatcar01x" },
+    { label = "Midland Boxcar 05X", model = "midlandboxcar05x" },
+    { label = "Private Coal Car 01X", model = "PRIVATECOALCAR01X" },
+    { label = "Private Dining Car 01X", model = "PRIVATEDINING01X" },
+    { label = "Private Baggage 01X", model = "privatebaggage01X" },
+    { label = "Private Passenger 01X", model = "privatepassenger01x" },
+    { label = "Private Boxcar 01X", model = "privateboxcar01x" },
+    { label = "Private Boxcar 02X", model = "privateboxcar02x" },
+    { label = "Private Boxcar 04X", model = "privateboxcar04x" },
+    { label = "Private Flatcar 01X", model = "privateflatcar01x" },
+    { label = "Private Observation Car", model = "privateobservationcar" },
+    { label = "Private Armoured Car", model = "privatearmoured" },
+    { label = "Private Open Sleeper 02X", model = "privateopensleeper02x" },
+    { label = "Winter Steamer", model = "WINTERSTEAMER" },
+    { label = "Winter Coal Car", model = "wintercoalcar" },
+    { label = "Armored Car 03X", model = "armoredcar03x" },
+
+    -- Misc
+    { label = "Handcart", model = "HANDCART" },
+    { label = "Smuggler 02", model = "SMUGGLER02" },
+    { label = "Hot Air Balloon 01", model = "HOTAIRBALLOON01" },
+    { label = "Breach Cannon", model = "BREACH_CANNON" },
+    { label = "Gatling Gun", model = "GATLING_GUN" },
+    { label = "Gatling Maxim 02", model = "GATLINGMAXIM02" },
+    { label = "Hotchkiss Cannon", model = "hotchkiss_cannon" }
 }
